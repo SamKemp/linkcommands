@@ -1,0 +1,40 @@
+name: LinkCommands
+main: pw.untamemadman.plugins.linkcommands.LinkCommands
+description: This plugin is made by untamemadman and gives you info about stuff.
+prefix: MultiCube
+version: 1.0
+database: false
+author: untamemadman
+website: http://modding.untamemadman.pw
+
+commands:
+    tickets:
+        description: The server tickets
+        aliases:
+        usage: /tickets
+        permission: linkcommands.tickets
+        permission-message: You do not have /<permission>
+    website:
+        description: The server's Website
+        aliases:
+        usage: /website
+        permission: linkcommands.website
+        permission-message: You do not have /<permission>
+    store:
+        description: The server's Store
+        aliases:
+        usage: /store
+        permission: linkcommands.store
+        permission-message: You do not have /<permission>
+    youtube:
+        description: The server's YouTube
+        aliases:
+        usage: /store
+        permission: linkcommands.youtube
+        permission-message: You do not have /<permission>
+    twitter:
+        description: The server's Twitter
+        aliases:
+        usage: /twitter
+        permission: linkcommands.twitter
+        permission-message: You do not have /<permission>

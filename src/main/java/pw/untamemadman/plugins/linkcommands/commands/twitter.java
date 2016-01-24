@@ -28,12 +28,12 @@ public class twitter implements CommandExecutor
             if (sender instanceof Player)
             {
                 Player player = (Player) sender;
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', LinkCommands.prefix + LinkCommands.youtube));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', LinkCommands.prefix + LinkCommands.twitter));
                 return true;
             }
             else
             {
-                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', LinkCommands.prefix + LinkCommands.youtube));
+                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', LinkCommands.prefix + LinkCommands.twitter));
                 return true;
             }
         }

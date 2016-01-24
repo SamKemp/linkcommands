@@ -8,20 +8,46 @@ import pw.untamemadman.plugins.linkcommands.commands.*;
  */
 public class LinkCommands extends JavaPlugin
 {
-    public static String prefix = "&7[&aMultiCubeUk&7]&b ";
-    public static String tickets = "http://www.multicube.co/supporttickets";
-    public static String website = "http://www.multicube.co";
-    public static String store = "http://store.multicube.co";
-    public static String youtube = "https://www.youtube.com/channel/UC9DCt6T-CpbhKqLjk6fudRA";
-    public static String twitter = "https://twitter.com/MultiCubeUk";
+    String path = "links.";
+    public static String prefix;
+    public static String tickets;
+    public static String website;
+    public static String store;
+    public static String youtube;
+    public static String twitter;
 
     @Override
     public void onEnable()
     {
-        this.getCommand("tickets").setExecutor(new tickets (this));
+        prefix = getConfig().getString(path + "prefix");
+        website = getConfig().getString(path + "website");
+        tickets = getConfig().getString(path + "tickets");
+        store = getConfig().getString(path + "store");
+        youtube = getConfig().getString(path + "youtube");
+        twitter = getConfig().getString(path + "twitter");
+
+
         this.getCommand("website").setExecutor(new website (this));
+        this.getCommand("tickets").setExecutor(new tickets (this));
         this.getCommand("store").setExecutor(new store (this));
         this.getCommand("youtube").setExecutor(new youtube (this));
         this.getCommand("twitter").setExecutor(new twitter (this));
+    }
+
+    public void loadConfig()
+    {
+        loadConfigDefaults();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+    }
+
+    public void loadConfigDefaults()
+    {
+        getConfig().set(path + "prefix", "&7[&aMultiCubeUk&7]&b ");
+        getConfig().set(path + "website", "Website URL");
+        getConfig().set(path + "tickets", "Tickets URL");
+        getConfig().set(path + "store", "Webstore URL");
+        getConfig().set(path + "youtube", "YouTube URL");
+        getConfig().set(path + "twitter", "Twitter URL");
     }
 }

@@ -21,6 +21,8 @@ public class LinkCommands extends JavaPlugin
     @Override
     public void onEnable()
     {
+        loadConfig();
+
         prefix = getConfig().getString(path + "prefix");
         website = getConfig().getString(path + "website");
         tickets = getConfig().getString(path + "tickets");

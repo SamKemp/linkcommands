@@ -10,7 +10,7 @@ import java.io.Console;
  */
 public class LinkCommands extends JavaPlugin
 {
-    public static String prefix = "&7[&aMultiCubeUk&7]&b";
+    public static String prefix = "&7[&aMulti&cCube&5Uk&7]&b ";
     public static String tickets = "http://www.multicube.co/supporttickets";
     public static String website = "http://www.multicube.co";
     public static String store = "http://store.multicube.co";

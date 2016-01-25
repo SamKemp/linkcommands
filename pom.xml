@@ -6,7 +6,7 @@
 
     <groupId>pw.untamemadman.plugins</groupId>
     <artifactId>linkcommands</artifactId>
-    <version>3.0</version>
+    <version>4.0</version>
 
     <build>
         <plugins>

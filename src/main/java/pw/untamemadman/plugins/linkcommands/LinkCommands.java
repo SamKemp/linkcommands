@@ -72,9 +72,9 @@ public class LinkCommands extends JavaPlugin
 
     public void loadConfig()
     {
-        loadConfigDefaults();
-        getConfig().options().copyDefaults(true);
-        saveConfig();
+        //loadConfigDefaults();
+        //getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
     }
 
     public void loadConfigDefaults()

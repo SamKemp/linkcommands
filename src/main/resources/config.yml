@@ -1,0 +1,22 @@
+links:
+#This is the config for LinkCommands
+#It is used to set a custom prefix and URL's for things
+#Change the default settings for the commands to work
+#
+#
+#The prefix you want the plugin to use
+prefix: &7[&aMultiCubeUk&7]&b
+#The website for your server
+website: Website URL
+#The tickets page
+tickets: Tickets URL
+#Your webstore link
+store: Webstore URL
+#Your server's YouTube Channel link
+youtube: YouTube URL
+#Your server's Twitter link
+twitter: Twitter URL
+#
+#
+#
+#Config complete

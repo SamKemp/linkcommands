@@ -2,7 +2,7 @@ name: LinkCommands
 main: pw.untamemadman.plugins.linkcommands.LinkCommands
 description: This plugin is made by untamemadman and gives you info about stuff.
 prefix: MultiCube
-version: 4.0
+version: 5.0
 database: false
 author: untamemadman
 website: http://modding.untamemadman.pw

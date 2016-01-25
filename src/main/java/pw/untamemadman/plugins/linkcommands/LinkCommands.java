@@ -3,6 +3,8 @@ package pw.untamemadman.plugins.linkcommands;
 import org.bukkit.plugin.java.JavaPlugin;
 import pw.untamemadman.plugins.linkcommands.commands.*;
 
+import java.io.Console;
+
 /**
  * Created by untamemadman on 22/01/2016.
  */
@@ -26,12 +28,46 @@ public class LinkCommands extends JavaPlugin
         youtube = getConfig().getString(path + "youtube");
         twitter = getConfig().getString(path + "twitter");
 
-
-        this.getCommand("website").setExecutor(new website (this));
-        this.getCommand("tickets").setExecutor(new tickets (this));
-        this.getCommand("store").setExecutor(new store (this));
-        this.getCommand("youtube").setExecutor(new youtube (this));
-        this.getCommand("twitter").setExecutor(new twitter (this));
+        if (website != "Website URL")
+        {
+            this.getCommand("website").setExecutor(new website(this));
+        }
+        else
+        {
+            getLogger().info(String.format("Change the '" + website + "' in the config to enable the /website command"));
+        }
+        if (tickets != "Tickets URL")
+        {
+            this.getCommand("tickets").setExecutor(new tickets(this));
+        }
+        else
+        {
+            getLogger().info(String.format("Change the '" + tickets + "' in the config to enable the /tickets command"));
+        }
+        if (store != "Webstore URL")
+        {
+            this.getCommand("store").setExecutor(new store(this));
+        }
+        else
+        {
+            getLogger().info(String.format("Change the '" + store + "' in the config to enable the /store command"));
+        }
+        if (youtube != "YouTube URL")
+        {
+            this.getCommand("youtube").setExecutor(new youtube(this));
+        }
+        else
+        {
+            getLogger().info(String.format("Change the '" + youtube + "' in the config to enable the /youtube command"));
+        }
+        if (twitter != "Twitter URL")
+        {
+            this.getCommand("twitter").setExecutor(new twitter(this));
+        }
+        else
+        {
+            getLogger().info(String.format("Change the '" + twitter + "' in the config to enable the /twitter command"));
+        }
     }
 
     public void loadConfig()
